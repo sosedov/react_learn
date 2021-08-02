@@ -2,14 +2,19 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header'
-import Technologies from './components/Technologies'
+import Nav from './components/Nav'
+import Content from './components/Content'
+import {BrowserRouter, Route} from 'react-router-dom'
 
-const App = () => {
+const App = (props) => {
   return (
-    <div className="App">
-      <Header />
-      <Technologies />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Nav />
+        <Content />
+      </div>
+    </BrowserRouter>
   );
 }
 
