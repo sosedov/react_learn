@@ -1,0 +1,36 @@
+.add_post{
+    display:block;
+    margin-bottom: 20px;
+}
+
+.add_post textarea{
+    width:50%;
+    resize:none;
+}
+
+.add_post button{
+    display:block;
+    width:50%;
+    padding:10px;
+    text-align: center;
+    background-color: rgb(100, 150, 194);
+    color:white;
+    font-weight: bold;
+}
+
+.message_cont{
+    width:80%;
+    margin-bottom:15px;
+    border-radius: 15px;
+    padding:10px;
+    background-color: rgb(140, 156, 170);
+}
+
+.message_like_icon{
+    font-size: 25px;
+    color:blue;
+}
+
+.message_like_count{
+
+}

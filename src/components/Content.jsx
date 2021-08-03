@@ -8,7 +8,7 @@ const Content = (props) => {
     return (
         <div className="content">
             <Route component={Profile} path='/profile'/>
-            <Route component={Posts}  path='/posts'/>
+            <Route path='/posts' render={() => <Posts state={props.state}/>} />
             <Route path='/dialogs' render={() => <Dialogs state={props.state}/>}/>
       </div>
     )
