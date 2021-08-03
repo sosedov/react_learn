@@ -1,0 +1,26 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialog_users{
+    padding:10px;
+    border-right: 4px solid white;
+}
+
+.dialogItem{
+    margin-bottom:20px;
+    color:gold;
+}
+
+.dialog_messages{
+    padding:10px;
+}
+
+.message{
+    margin:15px;
+    padding:5px;
+    border-radius:10px;
+    background-color:aliceblue;
+    width : 80%;
+}
