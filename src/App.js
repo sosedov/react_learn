@@ -12,7 +12,7 @@ const App = (props) => {
       <div className="App">
         <Header />
         <Nav />
-        <Content />
+        <Content state={props.state}/>
       </div>
     </BrowserRouter>
   );

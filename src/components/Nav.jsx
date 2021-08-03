@@ -6,10 +6,10 @@ const Nav = () => {
     return (
         <nav className="nav">
         <div>
-          <NavLink to="/profile" className={st.item}>Profile</NavLink>
+          <NavLink exact to="/profile" className={st.item}>Profile</NavLink>
         </div>
         <div>
-          <NavLink to="/posts" className={st.item}>Messages</NavLink>
+          <NavLink to="/posts" className={st.item}>Posts</NavLink>
         </div>
         <div>
           <NavLink to="/dialogs" className={st.item}>Dialogs</NavLink>
