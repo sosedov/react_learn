@@ -6,7 +6,8 @@ const PostAdd = (props) => {
 
     let addPost = () => {
         let post = newPostEl.current.value
-        props.addPost(post);
+        const action = {type:'ADD-POST', message:post}
+        props.dispatch(action)//;addPost(post);
         newPostEl.current.value = ""
     }
     return (

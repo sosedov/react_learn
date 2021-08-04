@@ -10,7 +10,7 @@ const Posts = (props) => {
     return (
         <div className="MyPosts">
             <h3>My Posts</h3>
-            <PostAdd  addPost={props.addPost}/>
+            <PostAdd  dispatch={props.dispatch}/>
             {posts}
         </div>
     )
