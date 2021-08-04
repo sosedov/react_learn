@@ -1,3 +1,6 @@
+import {dialogsReducer} from './dialogsReducer'
+import {profileReducer} from './profileReducer'
+
 let store = {
     _state : {
         messages : [
@@ -57,13 +60,16 @@ let store = {
     },
 
     dispatch(action){// {type:'ADD-POST'}
-        if(action.type == 'ADD-POST'){
+        /*if(action.type == 'ADD-POST'){
             if(action.message.replaceAll(" ","").length > 0){
                 this._state.posts.push({"id":7,"message":action.message,"likes":0});
             }
         }else if(action.type == "ADD-MESSAGE"){
             this._state.messages.push({"id":7,"text":action.message});
-        }
+        }*/
+        //нужно добавить разбивку по страницам
+        this._state = dialogsReducer(this._state, action);
+        this._state = profileReducer(this._state, action);
         this._callSubscriber(this._state);
     }
 }
