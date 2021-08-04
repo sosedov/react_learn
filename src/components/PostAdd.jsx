@@ -1,15 +1,13 @@
 import React from 'react';
 import p_style from '../style/Posts.module.css'
 
-const PostAdd = () => {
+const PostAdd = (props) => {
     let newPostEl = React.createRef()
 
     let addPost = () => {
         let post = newPostEl.current.value
-        if(post.replaceAll(" ","").length > 0){
-            alert(post);
-        }
-        
+        props.addPost(post);
+        newPostEl.current.value = ""
     }
     return (
         <div className={p_style.add_post}>

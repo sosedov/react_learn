@@ -8,13 +8,11 @@ import {BrowserRouter, Route} from 'react-router-dom'
 
 const App = (props) => {
   return (
-    <BrowserRouter>
       <div className="App">
         <Header />
         <Nav />
-        <Content state={props.state}/>
+        <Content state={props.state} addPost={props.addPost}/>
       </div>
-    </BrowserRouter>
   );
 }
 
