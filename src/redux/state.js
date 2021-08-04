@@ -60,17 +60,11 @@ let store = {
         if(action.type == 'ADD-POST'){
             if(action.message.replaceAll(" ","").length > 0){
                 this._state.posts.push({"id":7,"message":action.message,"likes":0});
-                this._callSubscriber(this._state)
             }
+        }else if(action.type == "ADD-MESSAGE"){
+            this._state.messages.push({"id":7,"text":action.message});
         }
-    },
-
-    addPost(postMessage){
-        if(postMessage.replaceAll(" ","").length > 0){
-            this._state.posts.push({"id":7,"message":postMessage,"likes":0});
-            this._callSubscriber(this._state)
-        }
-        
+        this._callSubscriber(this._state);
     }
 }
 

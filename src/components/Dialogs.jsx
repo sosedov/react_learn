@@ -10,7 +10,7 @@ const Dialogs = (props) => {
             <h3>Dialogs</h3>
             <div className={d_style.dialogs}>
                 <DialogUsers dialogs={props.state.dialogs}/>
-                <DialogMessages messages={props.state.messages}/>
+                <DialogMessages messages={props.state.messages}   dispatch={props.dispatch}/>
             </div>
         </div>
     )
