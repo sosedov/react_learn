@@ -4,7 +4,7 @@ import PostAdd from './PostAdd'
 import p_style from '../style/Posts.module.css'
 
 const Posts = (props) => {
-    let posts = props.state.posts.map(
+    let posts = props.state.profileReducer.posts.map(
         post => <Post key={`post_${post.id}`} id={post.id} message={post.message} likes={post.likes}/>
     )
     return (

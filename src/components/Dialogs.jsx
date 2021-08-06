@@ -9,8 +9,8 @@ const Dialogs = (props) => {
         <div>
             <h3>Dialogs</h3>
             <div className={d_style.dialogs}>
-                <DialogUsers dialogs={props.state.dialogs}/>
-                <DialogMessages messages={props.state.messages}   dispatch={props.dispatch}/>
+                <DialogUsers dialogs={props.state.dialogsReducer.dialogs}/>
+                <DialogMessages messages={props.state.dialogsReducer.messages}   dispatch={props.dispatch}/>
             </div>
         </div>
     )
