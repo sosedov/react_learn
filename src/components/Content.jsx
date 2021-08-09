@@ -4,12 +4,12 @@ import Posts from './Posts';
 import Dialogs from './Dialogs'
 import {Route} from 'react-router-dom'
 
-const Content = (props) => {
+const Content = () => {
     return (
         <div className="content">
             <Route component={Profile} path='/profile'/>
-            <Route path='/posts' render={() => <Posts state={props.state}  dispatch={props.dispatch}/>} />
-            <Route path='/dialogs' render={() => <Dialogs state={props.state}   dispatch={props.dispatch}/>}/>
+            <Route path='/posts' render={() => <Posts/>} />
+            <Route path='/dialogs' render={() => <Dialogs/>}/>
       </div>
     )
   }
