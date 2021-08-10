@@ -5,12 +5,9 @@ const DialogAddMessage = (props) => {
     let new_message_text = React.createRef()
 
     const AddMessage = () => {
-        let action = {
-            type: 'ADD-MESSAGE',
-            message: new_message_text.current.value
-        }
-        if(action.message.replaceAll(" ","").length > 0){
-            props.dispatch(action)//;addPost(post);
+        let message = new_message_text.current.value;
+        if(message.replaceAll(" ","").length > 0){
+            props.dispatch.AddMessage(message)
             new_message_text.current.value = ""
         }
     }

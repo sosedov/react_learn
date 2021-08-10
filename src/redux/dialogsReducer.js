@@ -1,3 +1,5 @@
+const ADD_MESSAGE = 'ADD-MESSAGE'
+
 let initialState = {
     messages : [
         {
@@ -38,8 +40,13 @@ let initialState = {
 }
 
 export const dialogsReducer = (state=initialState, action) => {
-    if(action.type == "ADD-MESSAGE"){
-        state.messages.push({"id":7,"text":action.message});
+    let stateCopy = {...state}
+    stateCopy.messages = [...state.messages]
+    if(action.type == ADD_MESSAGE){ 
+        stateCopy.messages.push({"id":7,"text":action.message});
+        return stateCopy
     }
-    return state
+    return stateCopy
 }
+
+export const AddMessageActionCreator = (message) =>  ({type: ADD_MESSAGE, message:message})
